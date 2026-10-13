@@ -1,4 +1,40 @@
-<mxfile host="65bd71144e">
+ ┌─────────┐
+ │  Start  │
+ └────┬────┘
+      │
+      ▼
+ ┌───────────────┐
+ │ Input Hours   │
+ │ Worked        │
+ └────┬──────────┘
+      │
+      ▼
+   ┌─────────┐
+   │ Hours > │
+   │   40?   │
+   └──┬───┬──┘
+      │Yes│No
+      ▼   ▼
+┌───────────┐   ┌─────────────────────┐
+│ Overtime  │   │ Pay = Hours × 20    │
+│ Hours =   │   └──────────┬──────────┘
+│ Hours-40  │              │
+└─────┬─────┘              │
+      ▼                    │
+┌───────────────────────────────┐
+│ Pay = (40 × 20) +             │
+│ (Overtime Hours × 30)         │
+└───────────┬───────────────────┘
+            │
+            ▼
+   ┌─────────────────┐
+   │ Output Paycheck │
+   └────────┬────────┘
+            │
+            ▼
+       ┌────────┐
+       │  End   │
+       └────────┘
     <diagram id="paycheck-calculator-page" name="Paycheck Calculator">
         <mxGraphModel dx="668" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
