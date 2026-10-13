@@ -9,18 +9,26 @@
 # PUT (output), LET (assignment), IF, ELSE, and ENDIF where they fit your design.
 
 START paycheck_calculator
+START
 
-    TODO: Obtain the required program input.
+    OUTPUT "Enter hours worked:"
+    INPUT hoursWorked
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
+    IF hoursWorked > 40 THEN
+
+        LET overtimeHours = hoursWorked - 40
+        LET pay = (40 * 20) + (overtimeHours * 30)
+
     ELSE
-        TODO: List the processing steps for the false decision path.
-    ENDIF
 
-    TODO: Output the calculated weekly paycheck.
+        LET pay = hoursWorked * 20
 
-END paycheck_calculator
+    END IF
+
+    OUTPUT "Weekly Paycheck: $", pay
+
+END
+    
 
 
 # === References ===
